@@ -40,7 +40,19 @@ import People from "@material-ui/icons/People";
 import Email from "@material-ui/icons/Email";
 import Icon from "@material-ui/core/Icon";
 import CardFooter from "../../components/Card/CardFooter";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import CustomDropdown from "../../components/CustomDropdown/CustomDropdown";
+import profileImage from "../../assets/img/faces/avatar.jpg";
 
+// @material-ui/icons
+import Search from "@material-ui/icons/Search";
+import Face from "@material-ui/icons/Face";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import Explore from "@material-ui/icons/Explore";
+
+import navStyles from "assets/jss/material-kit-react/views/componentsSections/navbarsStyle.js";
+import Navbars from "./Sections/Navbars";
 const useStyles = makeStyles(styles);
 
 export default function Components(props) {
@@ -48,21 +60,12 @@ export default function Components(props) {
   const {...rest} = props;
   return (
     <div>
-      <Header
-        brand="GIM WON BAE"
-        rightLinks={<HeaderLinks/>}
-        fixed
-        color="transparent"
-        changeColorOnScroll={{
-          height: 400,
-          color: "white"
-        }}
-        {...rest}
-      />
+      <Navbars />
       <div
         style={{
           backgroundImage: "url(" + image + ")",
           backgroundSize: "cover",
+          // backgroundColor: "black",
           backgroundPosition: "top center"
         }}
       >
